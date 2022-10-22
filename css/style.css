@@ -1,0 +1,170 @@
+.form {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 250px;
+    column-gap: 10px;
+    margin: 10px auto;
+    border: 2px solid black;
+}
+
+.form div {
+    display: grid;
+    width: 190px;
+    height: 240px;
+}
+
+.form div span {
+    background-color: #323234;
+}
+
+.form .e-letter {
+    grid-template-areas: "first-dash second-dash second-dash second-dash second-dash second-dash second-dash"
+        "first-dash . . . . . ."
+        "first-dash . . . . . ."
+        "first-dash third-dash third-dash third-dash third-dash third-dash third-dash"
+        "first-dash . . . . . ."
+        "first-dash . . . . . ."
+        "first-dash fourth-dash fourth-dash fourth-dash fourth-dash fourth-dash fourth-dash";
+}
+
+.form .e-letter .first-dash {
+    grid-area: first-dash;
+}
+
+.form .e-letter .second-dash {
+    grid-area: second-dash;
+}
+
+.form .e-letter .third-dash {
+    grid-area: third-dash;
+}
+
+.form .e-letter .fourth-dash {
+    grid-area: fourth-dash;
+}
+
+.form .l-letter {
+    grid-template-areas: "first-dash . . . . . ."
+        "first-dash . . . . . ."
+        "first-dash . . . . . ."
+        "first-dash . . . . . ."
+        "first-dash . . . . . ."
+        "first-dash . . . . . ."
+        "first-dash second-dash second-dash second-dash second-dash second-dash second-dash";
+}
+
+.form .l-letter .first-dash {
+    grid-area: first-dash;
+}
+
+.form .l-letter .second-dash {
+    grid-area: second-dash;
+}
+
+.form .l-letter::before {
+    content: "";
+    background-color: #fcb900;
+    animation-name: change-position-l;
+    animation-timing-function: linear;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    width: 80%;
+    height: 80%;
+    margin: 3.5px 0 0 3.5px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    transform: translate(160px, 204px);
+    opacity: 0;
+}
+
+@keyframes change-position-l {
+
+    50% {
+        opacity: 0;
+    }
+
+    62.5% {
+        opacity: 1;
+        transform: translate(160px, 204px);
+    }
+
+
+    75% {
+        opacity: 1;
+        transform: translate(0px, 203.5px);
+    }
+
+    87.5% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 0;
+    }
+}
+
+.form .e-letter::before {
+    content: "";
+    background-color: #fcb900;
+    animation-name: change-position-e;
+    animation-timing-function: linear;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    width: 80%;
+    height: 80%;
+    margin: 3.5px 0 0 3.5px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    transform: translate(160px, 0px);
+}
+
+@keyframes change-position-e {
+
+
+    5.6% {
+        transform: translate(0px, 0px);
+    }
+
+    11.2% {
+        transform: translate(0px, 103.5px);
+    }
+
+    16.8% {
+        transform: translate(160px, 103.5px);
+    }
+
+    22.4% {
+        transform: translate(0px, 103.5px);
+
+    }
+
+    28% {
+        transform: translate(0px, 203.5px);
+    }
+
+    33.6% {
+        transform: translate(160px, 204px);
+    }
+
+    39.2% {
+        transform: translate(0px, 204px);
+    }
+
+    44.8% {
+        transform: translate(0px, 0px);
+    }
+
+    50.4% {
+        transform: translate(160px, 0px);
+    }
+
+    100% {
+        transform: translate(160px, 0px);
+    }
+}
