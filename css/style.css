@@ -150,12 +150,10 @@ body {
 
 	20% {
 		transform: translate(-92px);
-		opacity: 1;
 	}
 
 	30% {
 		transform: translate(-92px, -255px);
-		opacity: 1;
 	}
 
 	40% {
